@@ -19,6 +19,7 @@ public sealed class ConvertersContainerModule : IContainerModule
         RegisterToStringConverter<ulong>(containerBuilder);
 
         RegisterToStringConverter<float>(containerBuilder);
+        RegisterToStringConverter<double>(containerBuilder);
     }
 
     private void RegisterToStringConverter<T>(IContainerBuilder containerBuilder)
