@@ -15,6 +15,7 @@ public sealed class ConvertersContainerModule : IContainerModule
 
         RegisterToStringConverter<byte>(containerBuilder);
         RegisterToStringConverter<ushort>(containerBuilder);
+        RegisterToStringConverter<uint>(containerBuilder);
     }
 
     private void RegisterToStringConverter<T>(IContainerBuilder containerBuilder)
