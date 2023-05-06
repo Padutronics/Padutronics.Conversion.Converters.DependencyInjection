@@ -7,5 +7,12 @@ public sealed class ConvertersContainerModule : IContainerModule
     public void Load(IContainerBuilder containerBuilder)
     {
         containerBuilder.For<ToStringConverterOptions>().UseSelf().SingleInstance();
+
+        RegisterToStringConverter<sbyte>(containerBuilder);
+    }
+
+    private void RegisterToStringConverter<T>(IContainerBuilder containerBuilder)
+    {
+        containerBuilder.For<IConverter<T, string>>().Use<ToStringConverter<T>>().InstancePerDependency();
     }
 }
