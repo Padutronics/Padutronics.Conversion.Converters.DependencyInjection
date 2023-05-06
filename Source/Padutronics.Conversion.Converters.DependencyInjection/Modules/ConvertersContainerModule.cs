@@ -28,6 +28,7 @@ public sealed class ConvertersContainerModule : IContainerModule
         RegisterToStringConverter<string>(containerBuilder);
 
         RegisterToStringConverter<DateTime>(containerBuilder);
+        RegisterToStringConverter<TimeSpan>(containerBuilder);
     }
 
     private void RegisterToStringConverter<T>(IContainerBuilder containerBuilder)
