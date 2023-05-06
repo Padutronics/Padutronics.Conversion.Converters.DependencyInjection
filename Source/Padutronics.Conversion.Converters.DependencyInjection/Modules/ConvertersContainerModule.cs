@@ -1,4 +1,5 @@
 using Padutronics.DependencyInjection;
+using System;
 
 namespace Padutronics.Conversion.Converters.DependencyInjection.Modules;
 
@@ -25,6 +26,8 @@ public sealed class ConvertersContainerModule : IContainerModule
         RegisterToStringConverter<decimal>(containerBuilder);
 
         RegisterToStringConverter<string>(containerBuilder);
+
+        RegisterToStringConverter<DateTime>(containerBuilder);
     }
 
     private void RegisterToStringConverter<T>(IContainerBuilder containerBuilder)
