@@ -8,6 +8,8 @@ public sealed class ConvertersContainerModule : IContainerModule
     {
         containerBuilder.For<ToStringConverterOptions>().UseSelf().SingleInstance();
 
+        RegisterToStringConverter<bool>(containerBuilder);
+
         RegisterToStringConverter<sbyte>(containerBuilder);
         RegisterToStringConverter<short>(containerBuilder);
         RegisterToStringConverter<int>(containerBuilder);
