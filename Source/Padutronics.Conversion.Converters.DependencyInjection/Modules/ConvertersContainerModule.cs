@@ -9,6 +9,7 @@ public sealed class ConvertersContainerModule : IContainerModule
         containerBuilder.For<ToStringConverterOptions>().UseSelf().SingleInstance();
 
         RegisterToStringConverter<sbyte>(containerBuilder);
+        RegisterToStringConverter<short>(containerBuilder);
     }
 
     private void RegisterToStringConverter<T>(IContainerBuilder containerBuilder)
