@@ -20,6 +20,7 @@ public sealed class ConvertersContainerModule : IContainerModule
 
         RegisterToStringConverter<float>(containerBuilder);
         RegisterToStringConverter<double>(containerBuilder);
+        RegisterToStringConverter<decimal>(containerBuilder);
     }
 
     private void RegisterToStringConverter<T>(IContainerBuilder containerBuilder)
